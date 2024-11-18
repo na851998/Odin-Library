@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My library</title>
+    <link
+      rel="icon"
+      href="https://www.svgrepo.com/show/190714/library-book.svg"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-logo">
+        <img
+          src="https://www.svgrepo.com/show/277499/library-book.svg"
+          alt=""
+        />
+        <span>My library</span>
+      </div>
+      <div class="header-btns">
+        <button>Account</button>
+        <button>Login</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="main-content">
+        <div>
+          <button class="add-btn">+ Add book</button>
+        </div>
+        <div class="book-cards"></div>
+      </section>
+
+      <div id="addBookModal" class="modal">
+        <div class="modal-content">
+          <h2>Add a New Book</h2>
+
+          <form id="addBookForm">
+            <label for="title">Title:</label>
+            <input
+              type="text"
+              id="title"
+              name="title"
+              pattern="^[a-zA-Z]+(?:\s[a-zA-Z]+)*$"
+              required
+            />
+
+            <label for="author">Author:</label>
+            <input
+              type="text"
+              id="author"
+              name="author"
+              pattern="^[a-zA-Z]+(?:\s[a-zA-Z]+)*$"
+              required
+            />
+
+            <label for="pages">Pages:</label>
+            <input
+              type="number"
+              id="pages"
+              name="pages"
+              min="30"
+              max="2000"
+              required
+            />
+
+            <label for="genre">Genre:</label>
+            <input
+              type="text"
+              id="genre"
+              name="genre"
+              pattern="^[a-zA-Z]+(?:\s[a-zA-Z]+)*$"
+              required
+            />
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4"></textarea>
+
+            <label for="cover">Cover Image:</label>
+            <input type="file" id="cover" name="cover" accept="image/*" />
+
+            <button type="submit" class="submit-btn">Add Book</button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
